@@ -1,5 +1,5 @@
 # USE of  SPOTIFY API
-![Image](Spotify_Developers.png)
+![Image](./images/Spotify_Developers.png)
 
 ## INDEX
 >  1. [Description of the Project](#Description-of-the-Project)
