@@ -94,9 +94,6 @@ app.post('/profile', (req, res) =>{
             })
 })
 
-// undefined
-// JSON.parse('undefined');
-
 
 app.get('/markets', (req, res) =>{
     axios.get(`https://api.spotify.com/v1/markets`)

@@ -54,7 +54,7 @@ To install this repository correctly follow the next steps.
 ```sh
     npm run dev
 ```
-> **If this command doesn´t work, use the next command in your command prompt**
+> **If the last command didn´t work, use the next command in your command prompt**
 
 ```sh
     node .\index.js
@@ -63,7 +63,43 @@ To install this repository correctly follow the next steps.
 ---
 
 ## Usage
-To make use of this repository correctly, follow the next steps.
+
+>Remmember that you need to have the project running in the server.
+```sh
+    npm run dev
+```
+
+Here in the usage, we will find two different types of methods, the ***[GET Method](#GET-Methods)*** and the ***[POST Method](#POST-Methods)*** these are the two methods that we will use for our API, nevertheless the Spotify API have other methods as ***PUT Method*** and ***DELETE Method*** for their use.
+
+To make correct use of this repository correctly, you need to follow some steps first.
+ 1. Get a TOKEN up to date. (For this you can visit the [Spotify Web Console](https://developer.spotify.com/console/), select a End Point and press "GET TOKEN")
+ >If you are not able to get yours, or want to use mine, contact with me.
+
+ 2. On ***Postman*** create a new *Workspace* and then a new *Request*.
+
+ 3. Once we have done the first 2 steps we are able to start doing some request in Postman. Bellow are the EndPoints I use for mi API.
+ 
+|         |     Mine    |  Spotify's EndPoint | Method |
+| :---:   |    :----:   |         :---:       |  :---: |
+| Base    | http://localhost:8080/      | https://api.spotify.com/v1   | |
+| Markets               | /markets            | /markets           | GET |
+| Current User          | /currUser           | /me                | GET |
+| Categories            | /Categories         | /browse/categories | GET |
+| Genres                | /genres             | /recommendations/available-genre-seeds| GET |
+| Featured Playlists    | /featured_playlists | /browse/featured-playlists| GET |
+| Search                | /search             | /search            | POST |
+| Tracks in a Playlist  | /tracks_of_playlists| /{playlist_id}/tracks     | POST |
+| Image of a Playlist   | /playlist_image     | /playlists/{playlist_id}/images     | POST |
+| Albums of an Artist   | /albums_of_Artist   | /artists/{id}/albums | POST |
+| Profile               | /profile            | /users/{user_id} | POST |
+
+
+
+## GET Methods
+
+
+## POST Methods
+
 
 1. First of all you would need to have running this project in the developer server (If you don´t have the server running check how to do it in the [Instalation Section](#Instalation)).
 
