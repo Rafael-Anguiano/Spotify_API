@@ -7,7 +7,7 @@
 >  3. [Instalation](#Instalation)
 >  4. [Usage](#Usage)
 >  5. [Notes](#Notes)
->  6. [Creator and release date](#Developed-by:)
+>  6. [Creator and release date](#Developed-By:)
 
 ## Description of the Project
 This project is a first test of how to use APIs, for this time we are using the Spotify API. 
