@@ -105,8 +105,9 @@ But for this project we will check all the End Points using *Postman*. For this,
  6. For the next step you need to set the ***type*** of the request (GET) and our *Base End Point* with his ***extension***.
  7. Press the button to send the request.
 
+> Example of a GET request using axios
+
  ```Javascript
- // Example of a GET request using axios
  app.get('/currUser', (req, res) =>{
     axios.get(`https://api.spotify.com/v1/me`)
         .then(function (response){
