@@ -2,7 +2,7 @@
  * Rafael de Jesús Anguiano Suárez del Real
  * 17/08/2021
  */
-const token = 'BQDMiBC4jjesjRO3TGLq9dTxHe5bIErlSCRTehq3DJE_wk8YZ81WYx3kmB7UWwwVPWybjlX_xbW5am_6nfns-96Y5p6UXVw-JfkE79_R1R1jnFqDHEfYz9MV7ZzBi7EIWw8_Cw7aHt6N0Sq_';
+const token = 'BQDO3fdMT4b4Cjd_xC5xZFHh5X2S47zPlflIN3INUMjI_WUiKs55-pwi9giL2uLrAA7BJvyNgpG88e3XkD-S3-xMTk2mERnDMTgX7bhM69dcHtt0rB7YZXIaQ2nxBKC0Fsfr6wVTGIt24ZS7';
 const express = require('express');
 const axios = require('axios');
 const morgan = require('morgan');
@@ -24,7 +24,7 @@ app.get('/', (req, res) =>{
     res.send("<h1> Hello Rafa! </h1>");
 })
 
-//Post por parametro de entrada
+//Post Methods
 app.post('/search', (req, res) =>{
     const {Artist, type} = req.body;
     axios.get(`https://api.spotify.com/v1/search?q=${Artist}&type=${type}`)
@@ -94,7 +94,7 @@ app.post('/profile', (req, res) =>{
             })
 })
 
-
+// GET methods
 app.get('/markets', (req, res) =>{
     axios.get(`https://api.spotify.com/v1/markets`)
         .then(function (response){

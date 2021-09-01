@@ -75,13 +75,15 @@ To make correct use of this repository correctly, you need to follow some steps 
  1. Get a TOKEN up to date. (For this you can visit the [Spotify Web Console](https://developer.spotify.com/console/), select a End Point and press "GET TOKEN")
  >If you are not able to get yours, or want to use mine, contact with me.
 
- 2. On ***Postman*** create a new *Workspace* and then a new *Request*.
+ 2. Once we have the **TOKEN** let´s set this in our code, at the top of our [`index.js`](./index.js) code there is a constant called *token* and there is where we put our *token*.
 
- 3. Once we have done the first 2 steps we are able to start doing some request in Postman. Bellow are the EndPoints I use for mi API.
+ 3. On ***Postman*** create a new *Workspace* and then a new *Request*.
+
+ 4. Once we have done the first 2 steps we are able to start doing some request in Postman. Bellow are the EndPoints I use for mi API.
  
 |         |     Mine    |  Spotify's EndPoint | Method |
-| :---:   |    :----:   |         :---:       |  :---: |
-| Base    | http://localhost:8080/      | https://api.spotify.com/v1   | |
+| :---   |    :----   |         :---       |  :---: |
+| Base    | http://localhost:8080      | https://api.spotify.com/v1   | |
 | Markets               | /markets            | /markets           | GET |
 | Current User          | /currUser           | /me                | GET |
 | Categories            | /Categories         | /browse/categories | GET |
@@ -94,30 +96,66 @@ To make correct use of this repository correctly, you need to follow some steps 
 | Profile               | /profile            | /users/{user_id} | POST |
 
 
-
 ## GET Methods
+The **GET method** is the easiest one because we don´t need to send anything more than the request. We can check this request just following the EndPoints in the web browser. 
 
+But for this project we will check all the End Points using *Postman*. For this, please follow the next steps:
+
+ 5. The Name of the request you can set it as you want.
+ 6. For the next step you need to set the ***type*** of the request (GET) and our *Base End Point* with his ***extension***.
+ 7. Press the button to send the request.
+
+ ```Javascript
+ // Example of a GET request using axios
+ app.get('/currUser', (req, res) =>{
+    axios.get(`https://api.spotify.com/v1/me`)
+        .then(function (response){
+            console.log(response.data);
+            res.send(response.data)
+        })
+})
+ ```
 
 ## POST Methods
+The ***POST Method*** is a little bit harder than a *GET Method*, because we need to send information for the request. That´s why we are using ***Postman*** in this project, to make easier to use a *POST request*.
 
+ 5. Is important to make a request of the parameters that we need, we can make a request of more than one parameter, in the next example is shown how to request two parameters (Artist and type).
 
-1. First of all you would need to have running this project in the developer server (If you don´t have the server running check how to do it in the [Instalation Section](#Instalation)).
+ 6. The Name of the request you can set it as you want.
+ 7. For the next step you need to set the ***type*** of the request (POST) and our *Base End Point* with his ***extension***.
+ 8. Next of this, we need to set the ***Body*** of our request, this time we are passing the parameters using a **JSON**, bellow is an example of this.
+ 9. Press the button to send the request.
 
-2. Make the connections shown [above](#Circuits-Connections)
+>Example of the parameters passed in JSON
+```JSON
+{
+    "Artist" : "Muse",
+    "type": "track"
+}
+```
+>Example of POST request
+```Javascript
+app.post('/search', (req, res) =>{
+    const {Artist, type} = req.body;
+    axios.get(`https://api.spotify.com/v1/search?q=${Artist}&type=${type}`)
+        .then(function (response){
+            console.log(response.data);
+            res.send(response.data)
+        })
+        .catch(function (error){
+            const {message} = error
+            res.status(404).json({message})
+        })
+})
+```
 
-3. Once you have made the connections, you need to open the [Schrodinger-s-cat.ino](./Schrodinger-s-cat.ino) code in an **Arduino Simulator** or an **Arduino IDE** 
-4. Upload the code to your Arduino and you would be ready to go.
+> 10. If the request doesn´t work, go to the Authorization tab in the request options and select ***OAuth2.0***, after this pass the **TOKEN** to Postman
 
-> 5. You can *press* the **restart button** on your Arduino if you want, and it will start with his last state saved on the memory.
-> 6. The state of the cat is shown in the ***Serial monitor*** 
 ---
 
 ## Notes:
-
-1. In the serial monitor you can see some 0s and some 1 followed by a phrase
-    - 0 means that the cat is staying where it is.
-    - 1 means that the cat is changing its position.
-    - The phrase tells you what the cat did, **salio** if the cat is going outside, **entro** if the cat is going inside the house. 
+ 1. Running on port 8080
+ 2. To have a better performance with our ***POST Method*** don´t forget to use a *catch( )* function after our request. 
 
 ---
 
