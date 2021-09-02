@@ -2,7 +2,7 @@
  * Rafael de Jesús Anguiano Suárez del Real
  * 17/08/2021
  */
-const token = 'BQDO3fdMT4b4Cjd_xC5xZFHh5X2S47zPlflIN3INUMjI_WUiKs55-pwi9giL2uLrAA7BJvyNgpG88e3XkD-S3-xMTk2mERnDMTgX7bhM69dcHtt0rB7YZXIaQ2nxBKC0Fsfr6wVTGIt24ZS7';
+const token = 'BQCJDU1xkxNYjmNGaMCtzBpoe0U4Ek80A4mY57bRdGkmoKsNy3xiAcvlWHg0y4qKkZJ-ckgDQaIXQszzEjQ87WZGb46i66yl23S3b0y2K0HdUnlIfxTISch1oTQD9-aK2vXdEuz20nM-ADZF';
 const express = require('express');
 const axios = require('axios');
 const morgan = require('morgan');
