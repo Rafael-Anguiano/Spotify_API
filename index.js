@@ -2,7 +2,7 @@
  * Rafael de Jesús Anguiano Suárez del Real
  * 17/08/2021
  */
-const token = 'BQCJDU1xkxNYjmNGaMCtzBpoe0U4Ek80A4mY57bRdGkmoKsNy3xiAcvlWHg0y4qKkZJ-ckgDQaIXQszzEjQ87WZGb46i66yl23S3b0y2K0HdUnlIfxTISch1oTQD9-aK2vXdEuz20nM-ADZF';
+const token = 'BQDQ5KlB9vwbOZfTqnZxUuMrbKmVz6YIsCcASylZIQIfZQDgKARx1YQtgiy-rXnnUUgVt0T7Hpr2KeFyA7ZyQetwXDyc_m54-mwGfvnr8moCgX7kCc4yQ_j6vHa-zYgOhlVgizEIq4Zsqvcg';
 const express = require('express');
 const axios = require('axios');
 const morgan = require('morgan');
@@ -13,7 +13,7 @@ axios.defaults.headers.common = {'Authorization': `Bearer ${token}`}
 const app = express();
 
 // Setting port for APP
-let port = 8080;
+let port = process.env.PORT || 8080;
 
 //Middleware
 app.use(express.json());
@@ -23,6 +23,11 @@ app.use(morgan('dev'));
 app.get('/', (req, res) =>{
     res.send("<h1> Hello Rafa! </h1>");
 })
+
+app.get('/health', (req, res) =>{
+    res.send("<h1> OK! </h1>");
+})
+
 
 //Post Methods
 app.post('/search', (req, res) =>{
