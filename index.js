@@ -25,7 +25,7 @@ app.get('/', (req, res) =>{
 })
 
 app.get('/health', (req, res) =>{
-    res.send("<h1> OK! </h1>");
+    res.send("<h1> ADIOS </h1>");
 })
 
 
