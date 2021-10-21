@@ -13,7 +13,7 @@ axios.defaults.headers.common = {'Authorization': `Bearer ${token}`}
 const app = express();
 
 // Setting port for APP
-let port = process.env.PORT || 8080;
+let port = process.env.PORT || 3000;
 
 //Middleware
 app.use(express.json());
