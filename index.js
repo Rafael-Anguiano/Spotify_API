@@ -2,7 +2,7 @@
  * Rafael de Jesús Anguiano Suárez del Real
  * 17/08/2021
  */
-const token = 'BQCgrCISIiaIVxtYfvwki3yGdERa7rV3lzJV9MZSvhnLXHK_xbqw8AuO_OlyRL1SOr_SWpVVuuD20cZC9o7VPNfDR4Zsn6adbC6pcLZ1s7lADVQUDbjGuXW7b3iVrkcvru0PsOG5hcsWr1c7';
+const token = 'BQAcjxiC9JauBlu7MgEMpOSnkLJ7C2DNj_3khXDm9TiseOqauDkSE4N7oiC0D1no_RN0yFPCuyb6tzXBxpSH_8vnAT2WUwi0IBY5Jkl4gBEn3CNrOd1k58V3WgqOS0VddlnmbyUnoyXTGZvAOXQDx-7xtcI4aA3P8AXFUoGfHY1yrrbx';
 const express = require('express');
 const axios = require('axios');
 const morgan = require('morgan');
@@ -13,7 +13,7 @@ axios.defaults.headers.common = {'Authorization': `Bearer ${token}`}
 const app = express();
 
 // Setting port for APP
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 8080;
 
 //Middleware
 app.use(express.json());

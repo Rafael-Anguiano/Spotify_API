@@ -1,4 +1,4 @@
-# USE of  SPOTIFY API
+# USE of SPOTIFY API
 ![Image](./images/Spotify_Developers.png)
 
 ## INDEX
@@ -18,7 +18,7 @@ To implement this Spotify API to your own projects you should follow the next st
 > 3. Log In using your Spotify Account. (You can also use other methods to Log In or Sign In)
 
 ## About Spotify's API
-The spotify APIs and SDKs for JavaScript, iOS and Android, were created by Spotify to help you to develop unique experiences for music fans all around the world with just a few lines of code.
+The spotify APIs and SDKs for JavaScript, iOS and Android, were created by Spotify to help you develop unique experiences for music fans all around the world with just a few lines of code.
 
 Using this features you have access to...
  - Audio Features & Analysis: Explore audio features and in-depth audio analysis of tracks.
@@ -101,9 +101,9 @@ The **GET method** is the easiest one because we don´t need to send anything mo
 
 But for this project we will check all the End Points using *Postman*. For this, please follow the next steps:
 
- 5. The Name of the request you can set it as you want.
- 6. For the next step you need to set the ***type*** of the request (GET) and our *Base End Point* with his ***extension***.
- 7. Press the button to send the request.
+ 1. The Name of the request you can set it as you want.
+ 2. For the next step you need to set the ***type*** of the request (GET) and our *Base End Point* with his ***extension***.
+ 3. Press the button to send the request.
 
 > Example of a GET request using axios
 
@@ -120,12 +120,12 @@ But for this project we will check all the End Points using *Postman*. For this,
 ## POST Methods
 The ***POST Method*** is a little bit harder than a *GET Method*, because we need to send information for the request. That´s why we are using ***Postman*** in this project, to make easier to use a *POST request*.
 
- 5. Is important to make a request of the parameters that we need, we can make a request of more than one parameter, in the next example is shown how to request two parameters (Artist and type).
+ 1. Is important to make a request of the parameters that we need, we can make a request of more than one parameter, in the next example is shown how to request two parameters (Artist and type).
 
- 6. The Name of the request you can set it as you want.
- 7. For the next step you need to set the ***type*** of the request (POST) and our *Base End Point* with his ***extension***.
- 8. Next of this, we need to set the ***Body*** of our request, this time we are passing the parameters using a **JSON**, bellow is an example of this.
- 9. Press the button to send the request.
+ 2. The Name of the request you can set it as you want.
+ 3. For the next step you need to set the ***type*** of the request (POST) and our *Base End Point* with his ***extension***.
+ 4. Next of this, we need to set the ***Body*** of our request, this time we are passing the parameters using a **JSON**, bellow is an example of this.
+ 5. Press the button to send the request.
 
 >Example of the parameters passed in JSON
 ```JSON
@@ -150,13 +150,14 @@ app.post('/search', (req, res) =>{
 })
 ```
 
-> 10. If the request doesn´t work, go to the Authorization tab in the request options and select ***OAuth2.0***, after this pass the **TOKEN** to Postman
+> 6. If the request doesn´t work, go to the Authorization tab in the request options and select ***OAuth2.0***, after this pass the **TOKEN** to Postman
 
 ---
 
 ## Notes:
  1. Running on port 8080
- 2. To have a better performance with our ***POST Method*** don´t forget to use a *catch( )* function after our request. 
+ 2. To have a better performance with our ***POST Method*** don´t forget to use a `catch( )` function after our request. 
+ 3. For further information about how to pass the information in the ***POST Method*** check the ***[Endpoints](https://developer.spotify.com/console)***
 
 ---
 
