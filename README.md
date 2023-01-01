@@ -72,7 +72,7 @@ To install this repository correctly follow the next steps.
 Here in the usage, we will find two different types of methods, the ***[GET Method](#GET-Methods)*** and the ***[POST Method](#POST-Methods)*** these are the two methods that we will use for our API, nevertheless the Spotify API have other methods as ***PUT Method*** and ***DELETE Method*** for their use.
 
 To make correct use of this repository correctly, you need to follow some steps first.
- 1. Get a TOKEN up to date. (For this you can visit the [Spotify Web Console](https://developer.spotify.com/console/), select a End Point and press "GET TOKEN")
+ 1. Get a TOKEN up to date. (For this you can visit the [Spotify Web Console](https://developer.spotify.com/console/), select an End Point and press "GET TOKEN")
  >If you are not able to get yours, or want to use mine, contact with me.
 
  2. Once we have the **TOKEN** let´s set this in our code, at the top of our [`index.js`](./index.js) code there is a constant called *token* and there is where we put our *token*.
